@@ -1,21 +1,21 @@
 <?php
 include 'session.php';
 
-$conn = new mysqli("localhost", "root", "", "inventory");
+$conn = new mysqli("sql311.infinityfree.com", "if0_41473015", "BbH0vlC3Ep", "if0_41473015_pharmacy_db");
 if ($conn->connect_error) die("Connection failed");
 $conn->set_charset("utf8mb4");
 
 
-$sales = $conn->query("
-    SELECT p.name AS product_name, 
+$sales = $conn->query(
+    "SELECT p.name AS product_name, 
            s.quantity, 
            s.sale_date,
            p.price,
            (s.quantity * p.price) AS total
     FROM sales s
     JOIN products p ON s.product_id = p.id
-    ORDER BY s.sale_date DESC
-");
+    ORDER BY s.sale_date DESC"
+);
 ?>
 
 <!DOCTYPE html>
