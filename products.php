@@ -121,7 +121,7 @@ $products_result = $stmt->get_result();
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div>
+<div class="container">
     <h2>Medicine Management</h2>
 
     <?php if (!empty($message)): ?>
