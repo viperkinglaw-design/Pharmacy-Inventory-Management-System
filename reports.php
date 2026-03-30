@@ -22,6 +22,7 @@ $sales = $conn->query(
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sales Report - Pharmacy Inventory Management System</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -29,6 +30,7 @@ $sales = $conn->query(
   <div class="container">
     <h2>Sales Report</h2>
 
+    <div class="table-container">
     <table>
       <thead>
         <tr>
@@ -57,6 +59,7 @@ $sales = $conn->query(
         <?php endif; ?>
       </tbody>
     </table>
+    </div>
 
     <?php
     $total_revenue = 0;

@@ -117,6 +117,7 @@ $products_result = $stmt->get_result();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medicine Management - Pharmacy Inventory Management System</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -175,6 +176,7 @@ $products_result = $stmt->get_result();
     <h3>Medicine List (<?= $products_result->num_rows ?> medicines)</h3>
     
     <?php if ($products_result->num_rows > 0): ?>
+        <div class="table-container">
         <table>
             <thead>
                 <tr>
@@ -214,6 +216,7 @@ $products_result = $stmt->get_result();
                 <?php endwhile; ?>
             </tbody>
         </table>
+        </div>
     <?php else: ?>
         <div>
             <?= empty($search) ? 'No medicines found. Add your first medicine!' : 'No medicines match your search.' ?>

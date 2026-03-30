@@ -49,6 +49,7 @@ $products = $conn->query("SELECT id, name, stock FROM products WHERE stock > 0 O
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sales - Pharmacy Inventory Management System</title>
   <link rel="stylesheet" href="style.css">
 </head>

@@ -46,6 +46,7 @@ $conn->close();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Pharmacy Inventory Management System</title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -59,6 +60,20 @@ $conn->close();
             text-align: center;
         }
         .stats-bar strong { font-size: 1.3em; }
+        @media (max-width: 768px) {
+            .stats-bar {
+                font-size: 0.9em;
+                padding: 15px;
+            }
+            .stats-bar br { display: none; }
+            .stats-bar strong { font-size: 1.1em; }
+        }
+        @media (max-width: 480px) {
+            .stats-bar {
+                font-size: 0.8em;
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
