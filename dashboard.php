@@ -48,6 +48,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Pharmacy Inventory Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
         .stats-bar {
@@ -77,8 +78,20 @@ $conn->close();
     </style>
 </head>
 <body>
+<header class="site-header">
+    <div class="header-content">
+        <div class="logo">
+            <i class="fas fa-pills"></i>
+            <span>PharmaCare</span>
+        </div>
+        <div class="user-info">
+            <span>Welcome, <strong><?= htmlspecialchars($welcome_name) ?></strong></span>
+            <a href="logout.php" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+</header>
 <div class="container">
-    <h2>Welcome back, <strong><?= htmlspecialchars($welcome_name) ?></strong>!</h2>
+    <h2>Dashboard Overview</h2>
 
     <div class="stats-bar">
         <strong><?= $stats['products'] ?></strong> Products &nbsp;|&nbsp;
@@ -92,23 +105,28 @@ $conn->close();
 
     <div class="dashboard-cards">
         <a href="products.php" class="card">
+            <i class="fas fa-boxes card-icon"></i>
             <h3>Manage Medicines</h3>
             <p>Add, edit, delete and check stock levels</p>
         </a>
         <a href="sales.php" class="card">
+            <i class="fas fa-shopping-cart card-icon"></i>
             <h3>Record Sale</h3>
             <p>Quickly sell products & update stock</p>
         </a>
         <a href="reports.php" class="card">
+            <i class="fas fa-chart-line card-icon"></i>
             <h3>Sales Report</h3>
             <p>View all transactions & revenue</p>
         </a>
-        <a href="logout.php" class="card logout">
-            <h3>Logout</h3>
-            <p>Exit the system securely</p>
-        </a>
     </div>
 </div>
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; 2026 PharmaCare Inventory Management System. All rights reserved.</p>
+        <p>Powered by <i class="fas fa-heart" style="color: #e74c3c;"></i> for better healthcare management</p>
+    </div>
+</footer>
     <script src="script.js"></script>
 </body>
 </html>

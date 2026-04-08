@@ -47,12 +47,21 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Pharmacy Inventory Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
         .error { color: #e74c3c; background:#fdf2f2; padding:12px; border-radius:6px; margin:15px 0; text-align:center; font-weight:bold; }
     </style>
 </head>
 <body>
+<header class="site-header">
+    <div class="header-content">
+        <div class="logo">
+            <i class="fas fa-pills"></i>
+            <span>PharmaCare</span>
+        </div>
+    </div>
+</header>
     <div class="container">
         <h2>Login</h2>
 
@@ -70,6 +79,12 @@ $conn->close();
             <button type="submit">Login</button>
         </form>
     </div>
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; 2026 PharmaCare Inventory Management System. All rights reserved.</p>
+        <p>Powered by <i class="fas fa-heart" style="color: #e74c3c;"></i> for better healthcare management</p>
+    </div>
+</footer>
     <script src="script.js"></script>
 </body>
 </html>

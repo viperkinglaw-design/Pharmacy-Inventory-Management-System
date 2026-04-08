@@ -51,9 +51,22 @@ $products = $conn->query("SELECT id, name, stock FROM products WHERE stock > 0 O
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sales - Pharmacy Inventory Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="site-header">
+    <div class="header-content">
+        <div class="logo">
+            <i class="fas fa-pills"></i>
+            <span>PharmaCare</span>
+        </div>
+        <div class="user-info">
+            <a href="dashboard.php" class="logout-btn"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="logout.php" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+</header>
   <div class="container">
     <h2>Sales</h2>
 
@@ -78,6 +91,12 @@ $products = $conn->query("SELECT id, name, stock FROM products WHERE stock > 0 O
 
     <p><a href="dashboard.php">← Back to Dashboard</a> | <a href="reports.php">View Sales Report</a></p>
   </div>
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; 2026 PharmaCare Inventory Management System. All rights reserved.</p>
+        <p>Powered by <i class="fas fa-heart" style="color: #e74c3c;"></i> for better healthcare management</p>
+    </div>
+</footer>
     <script src="script.js"></script>
 </body>
 </html>
