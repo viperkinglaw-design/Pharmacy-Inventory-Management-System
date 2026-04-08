@@ -3,7 +3,8 @@
 html, body { height: 100%; }
 body {
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(140deg, #3d8bff 0%, #62c2ff 45%, #d4f0ff 100%);
+  background: radial-gradient(circle at top left, #4facfe 0%, #00f2fe 25%, #43e97b 50%, #38f9d7 75%, #4facfe 100%);
+  background-attachment: fixed;
   color: #1f2a44;
   padding: 25px;
   line-height: 1.5;
@@ -14,9 +15,9 @@ body {
   max-width: 1160px;
   margin: 20px auto;
   padding: 26px;
-  background: rgba(255,255,255,0.93);
+  background: rgba(255,255,255,0.95);
   border-radius: 18px;
-  box-shadow: 0 16px 40px rgba(31, 38, 62, 0.2);
+  box-shadow: 0 16px 40px rgba(31, 38, 62, 0.2), 0 0 20px rgba(79, 172, 254, 0.3);
   border: 1px solid rgba(255,255,255,0.6);
   backdrop-filter: blur(8px);
 }
@@ -32,7 +33,7 @@ h2 { font-size: 2.1rem; color: #214d80; text-align: center; margin-bottom: 20px;
   margin: 24px 0 18px;
 }
 .card {
-  background: linear-gradient(150deg, #ffffff 0%, #e8f5ff 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 50%, #e6f3ff 100%);
   border: 1px solid #d5e7f9;
   border-radius: 14px;
   padding: 20px;
@@ -50,10 +51,10 @@ h2 { font-size: 2.1rem; color: #214d80; text-align: center; margin-bottom: 20px;
 .card p { color: #4f667f; font-size: .95rem; }
 
 .card.logout {
-  background: #ec4f5c;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 50%, #dc4545 100%);
   color: #fff;
 }
-.card.logout:hover { background: #d34249; }
+.card.logout:hover { background: linear-gradient(135deg, #e55a5a 0%, #d44a42 50%, #c43d35 100%); }
 
 /* Forms */
 form {
@@ -169,14 +170,16 @@ a:hover { text-decoration: underline; }
     font-size: .95rem;
   }
   button { padding: 10px 16px; }
+  .container { width: 100%; max-width: none; }
+  body { padding: 5px; }
 }
 
 @media (max-width: 520px) {
   .dashboard-cards { grid-template-columns: 1fr; }
   form { gap: 10px; }
   h2 { font-size: 1.5rem; }
-  .container { padding: 14px; }
-  body { padding: 10px; }
+  .container { padding: 14px; width: 100%; max-width: none; }
+  body { padding: 5px; }
   .table-container { margin: 0 -14px; }
 }
 
@@ -184,4 +187,6 @@ a:hover { text-decoration: underline; }
   h1, h2, h3 { font-size: 1.4rem; }
   .card h3 { font-size: 1.2rem; }
   .edit-btn, .delete-btn, .small-btn { padding: 6px 10px; font-size: .8rem; }
+  .container { width: 100%; max-width: none; }
+  body { padding: 5px; }
 }
